@@ -29,6 +29,9 @@ gem 'devise'
 # Cancan gem for user roles
 gem 'cancan'
 
+gem 'annotate'
+gem 'enumerize'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
