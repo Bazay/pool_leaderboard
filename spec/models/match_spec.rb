@@ -12,5 +12,10 @@
 require 'rails_helper'
 
 RSpec.describe Match, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:players) { create_list :user, 2 }
+  let(:match) { create :match, users: players }
+
+  subject { match }
+
+  its(:users) { is_expected.to eq players }
 end

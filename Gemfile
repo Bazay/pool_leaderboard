@@ -32,6 +32,11 @@ gem 'cancan'
 gem 'annotate'
 gem 'enumerize'
 
+# For maintaining code styles
+gem 'rubocop', require: false
+# Rubocop lint for focused specs
+gem 'rubocop-rspec-focused', require: false
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

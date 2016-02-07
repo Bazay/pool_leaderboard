@@ -14,6 +14,16 @@ FactoryGirl.define do
     status 'not_played'
     played_at nil
 
+    transient do
+      users []
+    end
+
+    after(:create) do |match, evaluator|
+      evaluator.users.each do |user|
+        create :match_participation, user: user, match: match
+      end
+    end
+
     factory :played_match do
       status 'played'
       played_at Time.current
